@@ -5,56 +5,52 @@ html, body {
 }
 
 .slide_container {
-    display: block;
-    position: static;
-
     width: 100%;
     height: 460px;
 
     overflow: hidden hidden;
-    white-space: nowrap;
 }
 
-.slide_contents {
-    display: inline-block;
+.slide_list {
+    display: flex;
     position: relative;
 
     width: 100%;
     height: 100%;
 
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.slide_contents {
+    display: block;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    flex-shrink: 0;
+
     left: 0%;
     transition: left 0.5s ease;
+
+    background-position: center;
+    background-size: cover;
 }
 
 .slide_contents > a {
-    display: block;
+    display: flex;
     position: static;
 
     width: 100%;
     height: 100%;
 
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+
     text-decoration: none;
     text-align: center;
     color: white;
-    white-space: nowrap;
-}
-
-.slide_contents > a > h1 {
-    display: block;
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-    transform: translate( -50%, -50% );
-}
-
-.slide_contents > a > img {
-    display: block;
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center center;
 }
