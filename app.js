@@ -5,18 +5,18 @@ const slideList = document.getElementsByClassName("slide_list")[0]
 
 const slideCount = slideList.childElementCount
 
-let i = 0
+let currentIndex = 0
 
 leftButton.addEventListener("click", () => {
-    if (i > 0) {
-        i = i - 1
+    if (currentIndex > 0) {
+        currentIndex = currentIndex - 1
     }
-    slideList.style.left = `${-100 * i}%`
+    slideList.style.left = `${-100 * currentIndex}%`
 })
 
 rightButton.addEventListener("click", () => {
-    if (i < slideCount - 1) {
-        i = i + 1
+    if (currentIndex < slideCount - 1) {
+        currentIndex = currentIndex + 1
     }
-    slideList.style.left = `${-100 * i}%`
+    slideList.style.left = `${-100 * currentIndex}%`
 })
